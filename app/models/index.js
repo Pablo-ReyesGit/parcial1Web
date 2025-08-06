@@ -57,6 +57,13 @@ try {
   console.error("❌ Error al cargar modelo 'detalles':", err.message);
 }
 
+try {
+  db.detalles = require("./pelicula.model.js")(sequelize, Sequelize);
+  console.log("✅ Modelo 'pelicula' cargado correctamente.");
+} catch (err) {
+  console.error("❌ Error al cargar modelo 'pelicula':", err.message);
+}
+
 // Agrega más modelos si es necesario
 // try {
 //   db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);

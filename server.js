@@ -71,6 +71,13 @@ try {
   console.error("❌ Error al cargar detalle.routes.js:", err.message);
 }
 
+try {
+  require("./app/routes/pelicula.routes.js")(app);
+  console.log("✅ pelicula.routes.js cargado correctamente");
+} catch (err) {
+  console.error("❌ Error al cargar pelicula.routes.js:", err.message);
+}
+
 // Configuración del puerto
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
