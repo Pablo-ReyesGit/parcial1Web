@@ -58,7 +58,7 @@ try {
 }
 
 try {
-  db.detalles = require("./pelicula.model.js")(sequelize, Sequelize);
+  db.peliculas = require("./pelicula.model.js")(sequelize, Sequelize);
   console.log("✅ Modelo 'pelicula' cargado correctamente.");
 } catch (err) {
   console.error("❌ Error al cargar modelo 'pelicula':", err.message);
